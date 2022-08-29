@@ -1,0 +1,17 @@
+.moves-container {
+    padding: 1em;
+
+    hr {
+        width: 100%;
+    }
+
+    .move-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .transfers-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

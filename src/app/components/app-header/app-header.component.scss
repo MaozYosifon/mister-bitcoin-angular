@@ -1,0 +1,40 @@
+.app-header {
+    // height: 125px;
+    width: 100%;
+    background-color: rgb(221, 141, 37);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    nav {
+        display: flex;
+        align-content: center;
+        align-self: center;
+
+        a {
+            img {
+                height: 20px;
+            }
+
+            color: black;
+            text-decoration: none;
+
+            &:not(:last-of-type) {
+                margin-inline-end: 50px;
+
+                @media screen and (max-width: 550px) {
+                    margin-inline-end: 15px;
+                }
+            }
+
+            &.active {
+                color: green;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<section class="contact-preview">
+    <img src="./assets/icons/contact.png" alt="">
+    <section class="info">
+        <section class="data">
+            <p>{{contact.name}}</p>
+        </section>
+        <section class="actions">
+            <div (click)="onRemoveContact()" class="remove-btn">Remove</div>
+            <a routerLink="edit/{{contact._id}}" class="edit-btn">Edit</a>
+            <a routerLink="{{contact._id}}" class="details-btn">Details</a>
+        </section>
+    </section>
+</section>

@@ -1,0 +1,6 @@
+<section>
+    <contact-filter></contact-filter>
+    <a routerLink="edit" class="add-contact-btn"><img src="./assets/icons/plus.png" alt=""></a>
+    <contact-list (onRemove)="onRemoveContact($event)" [contacts]="contacts$ | async"></contact-list>
+</section>
+<router-outlet></router-outlet>

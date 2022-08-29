@@ -1,0 +1,5 @@
+<div *ngIf="newMarketData && newMarketData && newTransactionsData && transactionsTableTitle" class="chart-container">
+    <chart [marketTableTitle]="marketTableTitle" [marketData]="newMarketData"
+        [transactionsTableTitle]="transactionsTableTitle" [transactionsData]="newTransactionsData">
+    </chart>
+</div>

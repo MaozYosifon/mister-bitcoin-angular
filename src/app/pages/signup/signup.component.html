@@ -1,0 +1,9 @@
+<section class="signup-container">
+    <img src="./assets/icons/bitcoin.png" alt="">
+    <form #form="ngForm" (ngSubmit)="onSignup(form)">
+        <p>Please enter your name</p>
+        <input [(ngModel)]="first" name="first" placeholder="First name" />
+        <button [disabled]="form.invalid" md-button color="primary" type="submit">Signup</button>
+    </form>
+
+</section>

@@ -1,0 +1,9 @@
+<div class="transfer-container">
+  Transfer coins to {{contact.name}} :
+  <div>
+    <label>Amount:</label>
+    <input type="number" [(ngModel)]="amount" min="0" max="{{loggedinUser.coins}}"
+      placeholder="max:{{loggedinUser.coins}}" />
+    <button (click)="onTransferCoins()" class="capitalize button">Transfer</button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<section class="moves-container">
+    <div *ngIf="contact._id" class="contactdetails-title-container">Your Moves :</div>
+    <div *ngFor="let move of loggedinUser.moves">
+        <div *ngIf="contact.name===move.to" class="move-container">
+            <hr>
+            <span class="date-container">At: {{move.at | date: 'dd.MM.yy, HH:mm a'}}</span>
+            <span class="">Amount: {{move.amount}}</span>
+        </div>
+    </div>
+    <div *ngIf="isTransfersMade && contact._id" class="notransfers-container">
+        no transfers have been made to this contact
+    </div>
+    <div *ngIf="isTransfersMade && !contact" class="notransfers-container">
+        no transfers have been made yet
+    </div>
+    <div *ngIf="!contact._id" class="homepage-title-container">last transactions :
+        <div *ngIf="lastTransfers && !contact._id" class="homepage-container">
+            <div *ngFor="let transfer of lastTransfers" class="transfers-container">
+                <hr>
+                <span>{{transfer.at | date: 'dd.MM.yy, HH:mm a'}}</span>
+                <span class="name-container">to: {{transfer.to}}</span>
+                <span>coins transferred: {{transfer.amount}}</span>
+            </div>
+        </div>
+    </div>
+</section>

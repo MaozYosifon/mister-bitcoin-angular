@@ -1,0 +1,13 @@
+<section class="home-conatiner">
+    <h1>Hello {{ user.name }}!</h1>
+    <div class="coin-section">
+        <img src="./assets/icons/coins.png">
+        <h3>Coins: {{ user.coins }}</h3>
+    </div>
+    <div class="btc-section">
+        <img src="./assets/icons/bitcoin.png">
+        <h3>BTC: {{ BTC$ | async }}</h3>
+    </div>
+    <move-list [loggedinUser]="user"></move-list>
+    <button (click)="logout()">Logged Out</button>
+</section>

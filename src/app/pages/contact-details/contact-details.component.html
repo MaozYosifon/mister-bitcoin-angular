@@ -1,0 +1,11 @@
+<section class="contact-details">
+    <img src="./assets/icons/contact.png" alt="">
+    <p>Name: <span>{{contact.name}}</span></p>
+    <p>Phone: <span>{{contact.phone}}</span></p>
+    <p>Email: <span>{{contact.email}}</span></p>
+</section>
+<div>
+    <transfer-fund [contact]="contact" [loggedinUser]="user"></transfer-fund>
+    <move-list [contact]="contact" [loggedinUser]="user"></move-list>
+</div>
+<button (click)="onBack()">Back</button>
